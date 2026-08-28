@@ -92,7 +92,7 @@ The optional screencast mode pauses on the review artifact, native tool ledger, 
 
 ## Honest remaining client gate
 
-This proves the complete native WebMCP lifecycle in Chrome 151. A separate 28 August run also proved native discovery, context read, draft, dynamic inventory, readback and impact inspection in the ChatGPT Codex in-app browser; see `CHATGPT-IN-APP-EVIDENCE.md`. This Chrome evidence is not a recording of ChatGPT Desktop's gray or blue Site Tools arrow. The verified Chrome-native recording remains the full-lifecycle audiovisual proof.
+This proves the complete native WebMCP lifecycle in Chrome 151. A separate 28 August run also proved native discovery, context read, draft, dynamic inventory, readback and impact inspection in the ChatGPT Codex in-app browser, as summarized in `VERIFICATION.md`. This Chrome evidence is not a recording of ChatGPT Desktop's gray or blue Site Tools arrow. The verified Chrome-native recording remains the full-lifecycle audiovisual proof.
 
 Official references:
 

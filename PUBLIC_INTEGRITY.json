@@ -60,7 +60,7 @@
     },
     {
       "path": "docs/NATIVE-CHROME-EVIDENCE.md",
-      "sha256": "6c8ae45e3696db9dd418af20cee776433b27bdf63927ce19cf72aee63396a343",
+      "sha256": "dc809401dc31483d9769bb24043b5080f0bc1cd134ac810543c2e944ecfa42b7",
       "transformed": true
     },
     {
@@ -130,17 +130,17 @@
     },
     {
       "path": "docs/SUBMISSION.md",
-      "sha256": "88af53f878d569ba5d2c73ae8104f28d0c4942448e0d7d058bfc7875b446808e",
+      "sha256": "89e2b14580255f12c5c61f64f52d160819bc44dc2096051bc54811d9add58e67",
       "transformed": true
     },
     {
       "path": "docs/VERIFICATION.md",
-      "sha256": "ebfef41fab5025dbae193a997a816f2cc1248c8d8edb9b47a06961a4e4d69a37",
+      "sha256": "38a8bb8aeaf41c89c796b10a3be84a0f3b0b950ad8828b4b7947a49c4cc1c4cf",
       "transformed": true
     },
     {
       "path": "docs/VIDEO-EVIDENCE.md",
-      "sha256": "9175c6aa0a3888ddeb4ed3fdd2e9dede40d3868ed8acb68d0fcbf604da67b4b6",
+      "sha256": "c1aeb4c6d762fcae7522efcf46c87fc1542df04f7e6693c3938e0483738cdbcd",
       "transformed": true
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "path": "scripts/audit-webmcp-public-export.mjs",
-      "sha256": "fc63428654cecd6249668eb7f892c21a5920460b8db9750a29cc3ec8bf27e0c1",
+      "sha256": "f11514782b84a577f62c151e16529b68b9bdeae848cad6ef3da71a6813a83930",
       "transformed": false
     },
     {

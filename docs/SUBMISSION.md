@@ -99,8 +99,8 @@ That produces a different human-agent relationship:
 ## Working demo
 
 - Live HTTPS app: [Aimily Context Review](https://aimily-webmcp-challenge.vercel.app/webmcp-challenge)
-- Public 75-second film: [Aimily Context Review film](https://aimily-webmcp-challenge.vercel.app/aimily-context-review.mp4)
-- Judge repository: [aimily-webmcp-challenge](https://github.com/felipestudionn/aimily-webmcp-challenge) (standalone evaluation package)
+- Public 75-second film: [Aimily Context Review film](https://youtu.be/PlCmUabRF94)
+- Judge repository: [Aimily Context Review](https://github.com/felipestudionn/aimily-context-review) (public standalone evaluation package, AGPL-3.0)
 - Reproduction guide: [DEMO.md](./DEMO.md)
 - Evals: [EVALS.md](./EVALS.md)
 - Verification record: [VERIFICATION.md](./VERIFICATION.md)
