@@ -4,7 +4,7 @@
 
 A personal agent turns a buyer meeting, fitting image, voice note or instruction into a reviewable fashion-collection revision. Aimily resolves the exact diff, maps its Context Graph, labels evidence and uncertainty, waits for human approval of the artifact hash, then exposes apply, receipt and undo at the right moments.
 
-[Open the live demo](https://aimily-webmcp-challenge.vercel.app/webmcp-challenge) · [Watch the 75-second film](https://aimily-webmcp-challenge.vercel.app/aimily-context-review.mp4) · [Read the submission](docs/SUBMISSION.md)
+[Open the live demo](https://aimily-webmcp-challenge.vercel.app/webmcp-challenge) · [Watch the 75-second film](https://youtu.be/PlCmUabRF94) · [Read the submission](docs/SUBMISSION.md)
 
 ![A voice note resolved as an exact diff and Context Graph](docs/screenshots/01-audio-context-graph.png)
 
@@ -81,7 +81,7 @@ This repository contains only the isolated Challenge surface and the shared dete
 
 Aimily existed before the Challenge. Its private product architecture and collection-creation domain are not being entered as newly built work. This public repository contains only the narrow shared deterministic revision subset required to prove reuse without duplicating business logic.
 
-The Challenge-specific extension was built after submissions opened on 25 August 2026. Work began on 27 August and includes this isolated signed sandbox, the `document.modelContext` adapter, page-scoped intent tools, dynamic authority, exact-hash approval policy, receipt-chain verification, native Chrome and ChatGPT evidence, adversarial evals and the Challenge film. The public repository's single commit provides a judge-visible timestamp without exposing private Aimily history.
+The Challenge-specific extension was built after submissions opened on 25 August 2026. Work began on 27 August and includes this isolated signed sandbox, the `document.modelContext` adapter, page-scoped intent tools, dynamic authority, exact-hash approval policy, receipt-chain verification, native Chrome and ChatGPT evidence, adversarial evals and the Challenge film. The public repository's initial publication commit provides a judge-visible timestamp without exposing private Aimily history.
 
 ## Publication boundary
 

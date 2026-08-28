@@ -17,6 +17,12 @@ The generated master is intentionally excluded from Git. Its source composition,
 
 ## Public delivery encode
 
+- Public YouTube URL: `https://youtu.be/PlCmUabRF94`
+- YouTube title: `Aimily Context Review | Governed Human-Agent Workflows with WebMCP`
+- Visibility: public, verified through YouTube's unauthenticated oEmbed endpoint on 28 August 2026
+- Copyright checks: completed with no issues found
+- Synthetic narration: disclosed in the video, description and YouTube altered-content field
+
 - URL: `https://aimily-webmcp-challenge.vercel.app/aimily-context-review.mp4`
 - H.264, 1920 x 1080, 30 fps, AAC stereo at 48 kHz
 - Duration: 75.050 seconds
@@ -47,6 +53,6 @@ The final disclosure frame remains readable at delivery resolution:
 
 ![Synthetic narration disclosure](./screenshots/08-synthetic-voice-disclosure.png)
 
-## Honest remaining media boundary
+## Honest media boundary
 
-The master and public delivery encode exist. A ChatGPT Desktop Site Tools insert is still an optional end-user upgrade, not a claimed proof; the current film uses the fully verified Chrome-native WebMCP capture.
+The public YouTube film and delivery encode exist. A ChatGPT Desktop Site Tools insert remains an optional end-user upgrade, not a claimed proof; the current film uses the fully verified Chrome-native WebMCP capture.

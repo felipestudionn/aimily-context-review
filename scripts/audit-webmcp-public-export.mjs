@@ -55,7 +55,7 @@ const blockedPathSegments = new Set([
 
 const blockedTextPatterns = [
   ['private source branch', /codex\/openai-webmcp-challenge/i],
-  ['private canonical repository', /felipestudionn\/aimily(?!-webmcp-challenge)/i],
+  ['private canonical repository', /felipestudionn\/aimily(?!-(?:webmcp-challenge|context-review))/i],
   ['internal gbrain wikilink', /\[\[default:/i],
   ['private provenance file', /SOURCE_PROVENANCE\.json/i],
   ['private provenance field', /"source(?:Repository|Branch|Commit|Sha256)"/i],

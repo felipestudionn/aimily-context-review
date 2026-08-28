@@ -83,7 +83,7 @@ This record covers the experimental WebMCP Challenge branch for Aimily.
 - The stable production API passes a separate 16-control red team covering origin, schema, session, tampering, injection evidence, approval ordering, artifact hash, replay, cross-session isolation and the approval, apply and undo receipt chain.
 - Independent GitHub Actions verification for the sanitized package passes install, production audit, the focused suite and build from the current sanitized repository.
 
-The exact Chrome-native command and result are in `NATIVE-CHROME-EVIDENCE.md`; the ChatGPT in-app browser evidence is recorded below; final media properties and hashes are in `VIDEO-EVIDENCE.md`.
+The exact Chrome-native command and result are in `NATIVE-CHROME-EVIDENCE.md`; the ChatGPT in-app browser evidence is recorded below; final media properties, hashes and the public YouTube URL are in `VIDEO-EVIDENCE.md`.
 
 ## Proven in the ChatGPT in-app browser
 
@@ -97,15 +97,6 @@ The exact Chrome-native command and result are in `NATIVE-CHROME-EVIDENCE.md`; t
 - Results reported seven of seven receipt integrity checks valid, `server_hmac_signed_current_session` and `production_data_changed: false`.
 
 The ChatGPT run proves native context, draft, dynamic registration, readback and impact inspection. Human approval, apply and undo were intentionally not executed in that run. Their full native lifecycle remains proven in Chrome 151. No ChatGPT video capture is claimed.
-
-## Devpost form verification
-
-- Felipe completed the human reCAPTCHA once. Automation did not retry, solve or bypass it.
-- Registration is complete and Devpost submission draft `1158510` exists.
-- All five submission steps and their current fields were inspected without transmitting project claims or submitting the entry.
-- Official rules and the form require a public live URL, a public repository with a visible open-source license and a public YouTube demo under three minutes with audio.
-- Because Aimily is an existing product, the submission must distinguish pre-existing architecture from the WebMCP Challenge extension created during the submission period. The branch history provides dated commits beginning 27 August 2026.
-- Spain is eligible under the published rules.
 
 ## Official basis
 
