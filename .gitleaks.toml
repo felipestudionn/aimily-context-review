@@ -1,0 +1,5 @@
+title = "Aimily WebMCP Challenge publication guard"
+
+[allowlist]
+description = "Only the documented placeholder environment file is expected"
+paths = ['''^\.env\.example$''']

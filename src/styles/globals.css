@@ -1,0 +1,673 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@theme {
+  --font-sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --font-display: var(--font-display), 'Georgia', serif;
+
+  --breakpoint-3xl: 120rem;
+
+  --color-crema: #f5f1e8;
+  --color-shade: #f3f2f0;
+  --color-cream: #f0ede8;
+  --color-light: #f5f2f0;
+  --color-carbon: #282a29;
+  --color-texto: #191919;
+  --color-grey: #757575;
+  --color-gris: #d8d8d8;
+  --color-error: #a0463c;
+  --color-success: #2d6a4f;
+  --color-warning: #c77000;
+  /* ─── Aimily accent palette (2026-04-15) ─── */
+  /* Use these for color-coding in calendar rows, block identifiers,
+     presentation headers, chart accents. Carbon/Midnight remain dominant. */
+  --color-sea-foam: #b6c8c7;   /* Sea Foam — cool, airy (Block 01 — Creative & Brand) */
+  --color-linen: #f1efed;      /* Linen — warm off-white surface */
+  --color-moss: #c5caa8;       /* Moss — pale sage (Block 02 — Merchandising). Lightened from #808368 so all 4 block tints pass WCAG with carbon text. */
+  --color-clay: #d8baa0;       /* Clay — pale warm tan (Block 03 — Design & Development). Lightened from #b0856a for the same reason. */
+  --color-citronella: #fff4ce; /* Citronella — soft yellow (Block 04 — Marketing & Sales) */
+  --color-midnight: #001519;   /* Midnight — kept as deep accent for surfaces / non-block use */
+  /* ─── shadcn semantic colors (direct values for v4) ─── */
+  --color-background: #F3F2F0;
+  --color-foreground: #191919;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #191919;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #191919;
+  --color-primary: #282A29;
+  --color-primary-foreground: #F5F1E8;
+  --color-secondary: #E8E8E8;
+  --color-secondary-foreground: #282A29;
+  --color-muted: #E8E8E8;
+  --color-muted-foreground: #757575;
+  --color-accent: #F0EDE8;
+  --color-accent-foreground: #282A29;
+  --color-destructive: #A0463C;
+  --color-destructive-foreground: #FAFAFA;
+  --color-border: #D8D8D8;
+  --color-input: #D8D8D8;
+  --color-ring: #282A29;
+
+  --radius: 0.625rem;
+  --radius-card: 16px;
+  --radius-input: 10px;
+  --radius-pill: 9999px;
+  --radius-btn: 10px;
+  --radius-lg: 0.625rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.375rem;
+
+  --shadow-card: 0 2px 24px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 32px rgba(0, 0, 0, 0.07);
+  --shadow-dropdown: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   DESIGN SYSTEM — Semantic Typography Classes
+   Use these in new/redesigned components.
+   Each class sets: size, weight, line-height, tracking.
+   ══════════════════════════════════════════════════════════════ */
+
+@utility type-h1 {
+  /*
+   * Typography scale — based on Daniel Cross / Framer template.
+   * Font: Helvetica Neue (our equivalent of Inter Display).
+   * Key: NEGATIVE letter-spacing on everything except section headers.
+   * Framer uses -0.02em to -0.04em — this is what makes it feel premium.
+   */
+
+  /* ── H1: hero titles, page headings — Framer /Heading 1 ── */
+  font-size: 2.875rem; /* 46px */
+  font-weight: 500;
+  line-height: 1.1em;
+  letter-spacing: -0.03em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-h2 {
+  /* ── H2: section titles — Framer /Heading 2 ── */
+  font-size: 2.5rem; /* 40px */
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-h3 {
+  /* ── H3: card titles, workspace headers — Framer /Heading 3 ── */
+  font-size: 2.25rem; /* 36px */
+  font-weight: 500;
+  line-height: 1.4em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-h4 {
+  /* ── H4: sub-headers — Framer /Heading 4 ── */
+  font-size: 1.5rem; /* 24px */
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-text-20 {
+  /* ── Text 20: large body — Framer /Text 20 ── */
+  font-size: 1.25rem; /* 20px */
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-text-18 {
+  /* ── Text 18: medium body — Framer /Text 18 ── */
+  font-size: 1.125rem; /* 18px */
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-text-16 {
+  /* ── Text 16: body text — Framer /Text 16 ── */
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  line-height: 1.6em;
+  letter-spacing: -0.02em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-text-14 {
+  /* ── Text 14: nav items, small body — Framer /Text 14 ── */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-section {
+  /* ── Section label: UPPERCASE small — Framer /Text 10 large ── */
+  font-size: 0.625rem; /* 10px */
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+@utility type-small {
+  /* ── Small bold — Framer /Text 10 ── */
+  font-size: 0.625rem; /* 10px */
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-display {
+  /* ── Legacy aliases for existing components ── */
+  font-size: 2.875rem;
+  font-weight: 500;
+  line-height: 1.1em;
+  letter-spacing: -0.03em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-display-sm {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-nav {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-body {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.04em;
+  color: rgb(0, 0, 0);
+}
+
+@utility type-caption {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.04em;
+  color: rgb(117, 117, 117);
+}
+
+@utility pill {
+  /* ── Pill component ── */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem; /* 6px 14px */
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  border-radius: 9999px;
+  transition: all 150ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@utility pill-default {
+  background: transparent;
+  border: 1px solid rgba(40, 42, 41, 0.08);
+  color: rgba(40, 42, 41, 0.4);
+  &:hover {
+    background: rgba(40, 42, 41, 0.04);
+    color: rgba(40, 42, 41, 0.6);
+  }
+}
+
+@utility pill-active {
+  background: var(--carbon);
+  border: 1px solid var(--carbon);
+  color: var(--crema);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+@utility pill-completed {
+  background: rgba(40, 42, 41, 0.04);
+  border: 1px solid rgba(40, 42, 41, 0.04);
+  color: rgba(40, 42, 41, 0.5);
+}
+
+@utility surface-card {
+  background: #ebeae6;
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+@utility surface-card-hover {
+  &:hover {
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.07);
+  }
+}
+
+@utility surface-content {
+  /* ── Content card — lighter, for workspace cards on shade bg ── */
+  background: #f5f2f0;
+  border-radius: 12px;
+}
+
+@layer base {
+  :root {
+    /* ─── Aimily Design System ─── */
+    --crema: #F5F1E8;
+    --carbon: #282A29;
+    --texto: #191919;
+    --gris: #D8D8D8;
+    --blanco: #FFFFFF;
+    --error: #A0463C;
+    --success: #2d6a4f;
+    --warning: #c77000;
+
+    /* ─── shadcn/ui mappings → Aimily palette ─── */
+    --background: oklch(1 0 0);        /* shade #F3F2F0 */
+    --foreground: oklch(0.145 0 0);       /* texto #191919 */
+    --card: oklch(1 0 0);              /* blanco */
+    --card-foreground: oklch(0.145 0 0);  /* texto */
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);          /* carbon #282A29 */
+    --primary-foreground: oklch(0.985 0 0); /* crema */
+    --secondary: oklch(0.97 0 0);          /* gris #D8D8D8 */
+    --secondary-foreground: oklch(0.205 0 0);
+    --accent: oklch(0.97 0 0);           /* crema */
+    --accent-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);              /* gris */
+    --muted-foreground: oklch(0.556 0 0);
+    --destructive: oklch(0.577 0.245 27.325);       /* error #A0463C */
+    --destructive-foreground: 0 0% 98%;
+    --border: oklch(0.922 0 0);             /* gris */
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);             /* carbon */
+    --radius: 0.625rem;
+
+    /* ─── Opacity scale (4 levels only) ─── */
+    --opacity-primary: 1;
+    --opacity-secondary: 0.50;
+    --opacity-tertiary: 0.25;
+    --opacity-ghost: 0.08;
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+  }
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LEGACY — Font size overrides for backward compatibility.
+   These keep the 949 existing usages of text-[11px] etc working.
+   New components should use .type-* classes above instead.
+   TODO: migrate file-by-file then remove these.
+   ══════════════════════════════════════════════════════════════ */
+
+/* Global font size boost — bump ~1px for readability */
+.text-\[9px\]  { font-size: 0.875rem !important; }  /* 9→14px */
+.text-\[10px\] { font-size: 0.875rem !important; }  /* 10→14px */
+.text-\[11px\] { font-size: 0.875rem !important; }  /* 11→14px */
+.text-xs       { font-size: 0.8125rem !important; } /* 12→13px */
+.text-sm       { font-size: 0.9375rem !important; } /* 14→15px */
+.text-base     { font-size: 1.0625rem !important; } /* 16→17px */
+.text-lg       { font-size: 1.1875rem !important; } /* 18→19px */
+.text-xl       { font-size: 1.3125rem !important; } /* 20→21px */
+.text-2xl      { font-size: 1.5625rem !important; } /* 24→25px */
+
+/* ── Global subtle rounding (outside @layer for higher specificity) ── */
+button, [role="button"],
+input, textarea, select {
+  border-radius: 6px !important;
+}
+[class~="border"] {
+  border-radius: 6px;
+}
+/* Preserve full pills — override global rounding */
+[class~="rounded-full"] {
+  border-radius: 9999px !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Aimily Button Styles
+   ══════════════════════════════════════════════════════════════ */
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-3 text-sm font-medium tracking-wide uppercase transition-colors;
+  background-color: var(--carbon);
+  color: var(--crema);
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-8 py-3 text-sm font-medium tracking-wide uppercase transition-colors;
+  background-color: transparent;
+  color: var(--crema);
+  border: 1px solid var(--gris);
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Responsive Typography
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 640px) {
+  h1, .h1 { font-size: 2.25rem; line-height: 1.2; }
+  h2, .h2 { font-size: 1.875rem; line-height: 1.3; }
+  h3, .h3 { font-size: 1.5rem; line-height: 1.4; }
+  .type-display { font-size: 1.5rem; }
+  .type-display-sm { font-size: 1.25rem; }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Animations
+   ══════════════════════════════════════════════════════════════ */
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+/* Soft outward halo used by the hero scroll-cue. Distinct from Tailwind's
+   built-in `animate-ping` because (a) it's slower (2.4s vs 1s) so it reads
+   as ambient invitation rather than urgent notification, and (b) opacity
+   only fades 0.55 → 0 so a faint ring is always visible. */
+@keyframes scroll-cue-halo {
+  0% { transform: scale(1); opacity: 0.55; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+.animate-scroll-cue-halo {
+  animation: scroll-cue-halo 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Slower vertical bounce for the chevron. Tailwind's built-in animate-bounce
+   is 1s which feels frantic on a hero cue; 2s reads as a calm "down here" wink. */
+@keyframes scroll-cue-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+.animate-scroll-cue-bounce {
+  animation: scroll-cue-bounce 2s ease-in-out infinite;
+}
+
+/* ── Workspace content transitions ── */
+@keyframes content-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes content-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.content-enter {
+  animation: content-fade-in 180ms ease-out forwards;
+  animation-delay: 40ms;
+  opacity: 0;
+}
+
+/* ── ViewPort enter animation (Daniel Cross spring) ── */
+@keyframes viewport-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-viewport-enter {
+  animation: viewport-enter 400ms cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  animation-delay: 60ms;
+  opacity: 0;
+}
+
+/* ── Sidebar sub-items expand/collapse ── */
+@keyframes substeps-expand {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 500px; }
+}
+@keyframes substeps-collapse {
+  from { opacity: 1; max-height: 500px; }
+  to { opacity: 0; max-height: 0; }
+}
+.substeps-enter {
+  animation: substeps-expand 200ms ease-out forwards;
+  overflow: hidden;
+}
+.substeps-exit {
+  animation: substeps-collapse 150ms ease-in forwards;
+  overflow: hidden;
+}
+
+/* Legacy wizard sidebar expand */
+@keyframes wizard-expand {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 500px; }
+}
+.wizard-expand {
+  animation: wizard-expand 0.25s ease-out forwards;
+  overflow: hidden;
+}
+
+/* Celebration overlay animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* SKU detail: zoom-in / zoom-out takeover */
+@keyframes skuZoomIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes skuZoomOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
+.sku-zoom-in {
+  animation: skuZoomIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.sku-zoom-out {
+  animation: skuZoomOut 0.2s cubic-bezier(0.4, 0, 1, 1) forwards;
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Scrollbar styles
+   ══════════════════════════════════════════════════════════════ */
+
+.scrollbar-thin::-webkit-scrollbar { width: 3px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+
+.scrollbar-subtle {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+.scrollbar-subtle::-webkit-scrollbar { width: 4px; }
+.scrollbar-subtle::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-subtle::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.15); border-radius: 2px; }
+.scrollbar-subtle::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.3); }
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }

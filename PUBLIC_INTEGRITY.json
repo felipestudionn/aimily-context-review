@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "package": "aimily-webmcp-challenge",
+  "scope": "standalone-judge-evaluation",
+  "files": [
+    {
+      "path": "app/api/labs/webmcp-challenge/route.test.ts",
+      "sha256": "f62384385605dbdd2c5644b07938a3bf49f7eb5635ce7c050b2e1e94891d20ce",
+      "transformed": false
+    },
+    {
+      "path": "app/api/labs/webmcp-challenge/route.ts",
+      "sha256": "506baed08b8fb811d1b5fe25220b91a19373eb3f3dbc003fe2ec8eda858bcc9d",
+      "transformed": false
+    },
+    {
+      "path": "app/icon.svg",
+      "sha256": "e2289544338b47d62dedd67d803b81c58ffb10f04f8f740c4f9576e41909f828",
+      "transformed": false
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "071dcd040a31eb2d38bf017e53195b897e228268b0e0e496394addb4885a9500",
+      "transformed": false
+    },
+    {
+      "path": "app/opengraph-image.tsx",
+      "sha256": "65d87e5929568c0c0f3911533b339dae89562789ec74a0d788904355e1406019",
+      "transformed": false
+    },
+    {
+      "path": "app/page.tsx",
+      "sha256": "a4890b38f3e66640ae803d7b04f7a0d91511021386533bce732c9d87cd38baaa",
+      "transformed": false
+    },
+    {
+      "path": "app/webmcp-challenge/page.tsx",
+      "sha256": "0faa89646245a4f6a57dff19b3da3529ffc87fbbad6373516f1cd33f168abd7c",
+      "transformed": false
+    },
+    {
+      "path": "docs/DEMO.md",
+      "sha256": "84e4492198ca5151e0d21ca33a76eefc28179ce2756d993b0a74d5a4c4389e9c",
+      "transformed": true
+    },
+    {
+      "path": "docs/EVALS.md",
+      "sha256": "c4841d0ecc6136c89ac301446896cec5a32094d2d685feeb5659e597c6f5d0bf",
+      "transformed": true
+    },
+    {
+      "path": "docs/JUDGE-SCORECARD.md",
+      "sha256": "d49cb9df102c795149662d0850e9a3b818c710563fc32360a66060acc6024125",
+      "transformed": true
+    },
+    {
+      "path": "docs/NARRATIVE.md",
+      "sha256": "0961c4d9afa1611ac8671ca980bf89979a42a4a1112206eec37f1ee53aa30417",
+      "transformed": true
+    },
+    {
+      "path": "docs/NATIVE-CHROME-EVIDENCE.md",
+      "sha256": "6c8ae45e3696db9dd418af20cee776433b27bdf63927ce19cf72aee63396a343",
+      "transformed": true
+    },
+    {
+      "path": "docs/screenshots/01-audio-context-graph.png",
+      "sha256": "ac695582855fe0be029ab996f5ff8e718fda1a0aaba46fd935a97882654d7b75",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/01-context-ready.png",
+      "sha256": "b05d7418ba6030a4b775fd125b546fbaae039f56dfeb7b8649eeb20f4c6a8c91",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/02-human-approved-brief.png",
+      "sha256": "23033810f5aa7fd38e30669ac648c01bcf342f87dab73a02b92d9d05e562c535",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/02-review-required.png",
+      "sha256": "925b27cde6079050e6e673e0c5ba4e15bb12f41fdeef38c60200ae98284072df",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/03-applied-receipt-and-undo.png",
+      "sha256": "e595fe302803363e3d77661713f89a6f72fecd480ecf9e38821a8c3b5bb26134",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/03-preview-applied.png",
+      "sha256": "599715714e8064a15a17df1927c903b44c2884f080042cd282a42b8c864df876",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/04-mobile-image-draft.png",
+      "sha256": "886519ff10f878adb22eb50e40f81577bed926ba3760698ffde4865d19635fb1",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/04-mobile.png",
+      "sha256": "1e16d8d49883fb71857e49f0ca46613a7897c0969d90ad6a7d6bd05ed1d3bc83",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/05-native-webmcp-discovery.png",
+      "sha256": "c7cfb0e7ea923fc86be6c5c6e51232d109b3652d6122c890d0e2a8b3a9df7260",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/06-native-webmcp-recovery.png",
+      "sha256": "82001a8c08de23be780b880342f1539c0dd48b2b557a49a386a52ad0be93c24b",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/07-submission-video-contact-sheet.png",
+      "sha256": "0bd74c8d28b4035a8c85ec8d8df6e95d46d75dfea99383c2fe6036b33990bdca",
+      "transformed": false
+    },
+    {
+      "path": "docs/screenshots/08-synthetic-voice-disclosure.png",
+      "sha256": "acf51c401f048bf1e6dd7cbbc67682a7cfdcfe74d0ae8f8c7c2c1e88452a795a",
+      "transformed": false
+    },
+    {
+      "path": "docs/SOURCE-MANIFEST.md",
+      "sha256": "01f597c880ae098eb1f5afb8637ad10cf1de56ad02cf3929c3309f6efda7eb5d",
+      "transformed": true
+    },
+    {
+      "path": "docs/SUBMISSION.md",
+      "sha256": "88af53f878d569ba5d2c73ae8104f28d0c4942448e0d7d058bfc7875b446808e",
+      "transformed": true
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "ebfef41fab5025dbae193a997a816f2cc1248c8d8edb9b47a06961a4e4d69a37",
+      "transformed": true
+    },
+    {
+      "path": "docs/VIDEO-EVIDENCE.md",
+      "sha256": "9175c6aa0a3888ddeb4ed3fdd2e9dede40d3868ed8acb68d0fcbf604da67b4b6",
+      "transformed": true
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a890839df3ed029bc52a6a5e26650df1e0f6eb2af170f00a273d778c5f972408",
+      "transformed": false
+    },
+    {
+      "path": "postcss.config.js",
+      "sha256": "323d21314f4ee8f2a44c196b2a0cfc87b98144ac5eae429c1749dd5a4da9da1f",
+      "transformed": false
+    },
+    {
+      "path": "scripts/audit-webmcp-public-export.mjs",
+      "sha256": "fc63428654cecd6249668eb7f892c21a5920460b8db9750a29cc3ec8bf27e0c1",
+      "transformed": false
+    },
+    {
+      "path": "scripts/evals/run-webmcp-chrome-native.mjs",
+      "sha256": "d70f8c20f0a408742c7742ff0ccc642b07252afd1cd170f697102af4196b31fd",
+      "transformed": false
+    },
+    {
+      "path": "scripts/evals/run-webmcp-public-red-team.mjs",
+      "sha256": "c602f0d5e367a61bd71b7990c299c40a58cfa9c60ac6c46133f3b45f807bd598",
+      "transformed": false
+    },
+    {
+      "path": "src/components/ui/badge.tsx",
+      "sha256": "1b292cd64608eef62eab1e43621071b32f794988a8c4e40fd1086cfbf8d9ef5d",
+      "transformed": false
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "sha256": "6f7d18705d50ab348f8d47fc040ed296503a6300fea6686c0acae42dbf20099a",
+      "transformed": false
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "sha256": "a41b4d3d618416128d0093af2575048a2de8ef25c0926bcea4f19a24a59de476",
+      "transformed": false
+    },
+    {
+      "path": "src/components/webmcp-challenge/AgentAuthorityStrip.tsx",
+      "sha256": "211747633c660fe87f8d676567e99752eb18483695d503fa86ce2c0a0f9cea97",
+      "transformed": true
+    },
+    {
+      "path": "src/components/webmcp-challenge/ApprovedReviewBrief.tsx",
+      "sha256": "36ddc49120d223c3d925c0bb3e9b29dbeecbd498565e558e6e4af3bd3ca02e56",
+      "transformed": false
+    },
+    {
+      "path": "src/components/webmcp-challenge/ChallengeExperience.tsx",
+      "sha256": "adedb2c11671684b628a04f2f87cf0e54f77333b7204870b3bb8da240bb129c5",
+      "transformed": true
+    },
+    {
+      "path": "src/components/webmcp-challenge/ContextImpactGraph.tsx",
+      "sha256": "fba3e439759322d42c5611df67613236fd00c7fe3be4c26b97346fb5916bbeec",
+      "transformed": false
+    },
+    {
+      "path": "src/components/webmcp/ChallengeTools.tsx",
+      "sha256": "202890815908d4c8d2a573aa8ef7d0f45df9abad1a053cc3f9f2a20c0e01016d",
+      "transformed": true
+    },
+    {
+      "path": "src/lib/domain/agent-world/contracts.ts",
+      "sha256": "55a4e2aae41e10176320ffeb4cbeb0dd92d25fd2be25376226b2ad2c99029bc8",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/domain/collection-creation/brief.test.ts",
+      "sha256": "801c23d28bfd7dfe4ede68000479c7127b9125f72fbad379377f6ce76cdd5ee2",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/domain/collection-creation/brief.ts",
+      "sha256": "8e4f56e7ef9862b270d4f97befd45fe756ca2015b401e92b8b2680f0451c5216",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/domain/collection-creation/contracts.ts",
+      "sha256": "2c8aa12dd85abd98cc8c6d3d84f3c6a23d2d5b2a89a49f9967a43b284f37e039",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/domain/collection-creation/impact.test.ts",
+      "sha256": "1ae82fe03974568628f8f737117c1047ebe8d828078e1981c353619bf9c8596e",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/domain/collection-creation/impact.ts",
+      "sha256": "34ca41387721a399e49426103dd91b476bf6b54ce7b7bad5a3da741e86e80d67",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/domain/collection-creation/revision-draft.ts",
+      "sha256": "57f0bb1b579e4601e90b099a686ed22d80e9cfd1cd0b4cc3af61f1943cd8ed56",
+      "transformed": true
+    },
+    {
+      "path": "src/lib/fonts.ts",
+      "sha256": "13ca00b16d124e62ad368b0fcf5933a95e0ba9e701e46b395be499a0cc668afb",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/rate-limit.ts",
+      "sha256": "fcb68307bff4678c8daf91cf1068cb6f1161eb888fc5aea8b193fd6bfed2f575",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/agent-prompt.test.ts",
+      "sha256": "aefff8c25c8136aeec8f5b93b9da592bcbcd877be27f094b39b5221d3e968056",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/agent-prompt.ts",
+      "sha256": "5fe7d81b16237a810d8f0b2e6d1b22da535aa8c56869fdc13dc83221c217feca",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/client.ts",
+      "sha256": "762cda04eeb01dcdc4c513824a384575aba9b5474696379def18b2aae0f01ed6",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/demo.ts",
+      "sha256": "74bbbe850bc95731470dc3eef0149e4e1656bd8d572ea3b449d549da7201765a",
+      "transformed": true
+    },
+    {
+      "path": "src/lib/webmcp-challenge/evals.test.ts",
+      "sha256": "c4114c9b78cb1ec3d432af044c05b3a749c2a6cf732f0d3e4265daf4211015a1",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/lifecycle.test.ts",
+      "sha256": "82e39f693c6b95a57568c8a0b8dcb052c2d0c37ac48adee489d25744df90ceef",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/lifecycle.ts",
+      "sha256": "e6a171fb96e9ad1159abf073b8123e06b5283371d7cb0e3c07ab0b61ad28157a",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/session.test.ts",
+      "sha256": "38a78fd75e4f3aaed87f9bfb662e544b474c1f7a02359351ac8ee5892f8ccff4",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/session.ts",
+      "sha256": "10b288c20580fc9533281bb29dcb448f8237f0150ecc9210dbba732a92da1b5b",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp-challenge/types.ts",
+      "sha256": "d55e6a725a945877f8cab2f55e362dc0dd977f8db10c930a36c26c7392c899f4",
+      "transformed": true
+    },
+    {
+      "path": "src/lib/webmcp/challenge-tools.test.ts",
+      "sha256": "ce67741d560f9fb7c791dd8a421e5e9fa41f6bca530b3f477c50104aaf48d0c4",
+      "transformed": false
+    },
+    {
+      "path": "src/lib/webmcp/challenge-tools.ts",
+      "sha256": "8ffb56d0be51aa48f35c8976786a731d3f1f0dc869ec73b6a57fdbdb5c2b288b",
+      "transformed": true
+    },
+    {
+      "path": "src/styles/globals.css",
+      "sha256": "42a82cb377b51c52b364347aa0c66735da6798163e0edadb25bbc40907a549c7",
+      "transformed": false
+    }
+  ],
+  "generatedFiles": [
+    "src/lib/domain/collection-creation/decision.ts",
+    "src/lib/webmcp/types.ts"
+  ]
+}
